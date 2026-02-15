@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Feliz San Valentín ❤️</title>
+
+<style>
+body{
+  margin:0;
+  background:black;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  height:100vh;
+  flex-direction:column;
+  font-family:Arial, sans-serif;
+  text-align:center;
+  color:white;
+  overflow:hidden;
+}
+
+.corazon{
+  position:relative;
+  width:220px;
+  height:200px;
+  transform:rotate(-45deg);
+  animation:latido 1s infinite;
+}
+
+.corazon:before,
+.corazon:after{
+  content:"";
+  position:absolute;
+  width:220px;
+  height:200px;
+  background:#ff0077;
+  border-radius:50%;
+  box-shadow:0 0 40px #ff0077, 0 0 80px #ff0077, 0 0 120px #ff0077;
+}
+
+.corazon:before{
+  top:-110px;
+  left:0;
+}
+
+.corazon:after{
+  left:110px;
+  top:0;
+}
+
+.texto{
+  margin-top:60px;
+  font-size:22px;
+  max-width:90%;
+  text-shadow:0 0 10px #ff0077;
+}
+
+@keyframes latido{
+  0%{ transform:rotate(-45deg) scale(1); }
+  50%{ transform:rotate(-45deg) scale(1.2); }
+  100%{ transform:rotate(-45deg) scale(1); }
+}
+</style>
+</head>
+
+<body onclick="document.getElementById('audio').play()">
+
+<div class="corazon"></div>
+
+<div class="texto">
+te amo mi amor, feliz san valentin,<br>
+desde lo mas profundo de mi ❤️,<br>
+Flor.
+</div>
+
+<audio id="audio" autoplay loop>
+<source src="saborami.mp3" type="audio/mpeg">
+</audio>
+
+</body>
+</html>

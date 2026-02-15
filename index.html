@@ -20,45 +20,49 @@ body{
   overflow:hidden;
 }
 
+/* CORAZÓN REAL */
 .corazon{
   position:relative;
-  width:220px;
+  width:200px;
   height:200px;
+  background:#ff003c;
   transform:rotate(-45deg);
   animation:latido 1s infinite;
+  box-shadow:0 0 40px #ff003c,
+             0 0 80px #ff003c,
+             0 0 120px #ff003c;
 }
 
 .corazon:before,
 .corazon:after{
   content:"";
   position:absolute;
-  width:220px;
+  width:200px;
   height:200px;
-  background:#ff0077;
+  background:#ff003c;
   border-radius:50%;
-  box-shadow:0 0 40px #ff0077, 0 0 80px #ff0077, 0 0 120px #ff0077;
 }
 
 .corazon:before{
-  top:-110px;
+  top:-100px;
   left:0;
 }
 
 .corazon:after{
-  left:110px;
+  left:100px;
   top:0;
 }
 
 .texto{
-  margin-top:60px;
+  margin-top:80px;
   font-size:22px;
   max-width:90%;
-  text-shadow:0 0 10px #ff0077;
+  text-shadow:0 0 10px #ff003c;
 }
 
 @keyframes latido{
   0%{ transform:rotate(-45deg) scale(1); }
-  50%{ transform:rotate(-45deg) scale(1.2); }
+  50%{ transform:rotate(-45deg) scale(1.15); }
   100%{ transform:rotate(-45deg) scale(1); }
 }
 </style>
@@ -76,7 +80,6 @@ Flor.
 
 <audio id="audio" autoplay loop>
 <source src="saborami.wav" type="audio/wav">
-Tu navegador no soporta audio.
 </audio>
 
 </body>
